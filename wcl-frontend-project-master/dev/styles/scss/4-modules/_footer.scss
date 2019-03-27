@@ -1,0 +1,49 @@
+.newsletter{
+  background: $brand-secondary-colour;
+  background: linear-gradient(rgba(38,50,56,0.45), rgba(38,50,56,0.45)), url('https://www.whatcar.com/car-leasing/images/footer-hero.jpg') no-repeat center;
+  background-size: cover;
+  position: relative;
+  height: 400px;
+  color: $white-colour;
+  text-align: center;
+  .form-control{
+    margin: 5px 0;
+  }
+}
+.newsletter-wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-footer{
+  background: $brand-secondary-colour;
+  color: $white-colour;
+  padding: 20px 0;
+  ul{
+    display: inline-block;
+    vertical-align: top;
+  }
+  li{
+    margin-right: 1.5rem;
+  }
+  a{
+    color: $white-colour;
+    text-transform: capitalize;
+    &:hover{
+      color: $accent-colour;
+    }
+  }
+  h3{
+    text-transform: capitalize;
+  }
+  .haymarket-brand{
+    width: 120px;
+  }
+}
+.main-footer-links{
+  margin-bottom: 1rem;
+}
+.main-footer-bottom{
+  margin-top: 1rem;
+}

@@ -1,0 +1,164 @@
+//small screens
+.header{
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+}
+
+.wc-header,
+.wcl-header{
+  height: 70px;
+  text-transform: capitalize;
+  font-weight: 500;
+  li{
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
+  img{
+    width: auto;
+    height: 70px;
+  }
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .icons{
+    margin-left: auto;
+    i{
+      padding: 0 0.5rem;
+    }
+  }
+}
+
+.wcl-header,
+.wcl-header-mobile{
+  background: $brand-colour;
+  color: $font-colour-light;
+}
+
+.wcl-links,
+.wcl-brand-dark,
+.wc-header,
+.wcl-header-mobile{
+  display: none;
+}
+
+//mobile nav
+.wcl-header-mobile{
+  position: fixed;
+  width: 100%;
+  height: 100vh; /* full screen */
+  top: 70px; /* height of wcl nav bar */
+  font-size: 1.125rem; /* 18px */
+  text-transform: capitalize;
+  padding: 20px;
+  overflow-x: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
+  li{
+    padding: 1rem;
+  }
+  a{
+    color: $font-colour-light;
+  }
+}
+
+.mobile-nav{
+  text-align: center;
+}
+
+.location-bar{
+  background: $anti-flash-white;
+  height: 3.125rem; /* 50px */
+}
+
+//medium sized screens
+//1030px = 64.375em
+@include media-min(64.375em){
+  .wc-header{
+    display: block;
+    background: $brand-colour;
+  }
+  .wc-links{
+    margin-right: auto;
+    a{
+      color: $font-colour-light;
+    }
+  }
+  .wcl-links{
+    a{
+      color: $font-colour-dark;
+    }
+  }
+  .wc-links a,
+  .wcl-links a{
+    &:hover{
+      color: $midnight-green
+    }
+  }
+  .wcl-header{
+    background: $white-colour;
+    color: $font-colour-dark;
+    box-shadow: 0px 10px 44px -30px $black-colour;
+    margin-top: 70px; /* prevents wcl-header hiding the wc header */
+    z-index: 800; /* prevent WC dropdown menu from displaying under elements */
+  }
+  .wcl-links,
+  .wcl-brand-dark{
+    display: block;
+  }
+  .wcl-links,
+  .wc-links{
+    padding-left: 1em;
+    cursor: pointer;
+  }
+  .fa-bars,
+  .wcl-brand-light{
+    display: none;
+  }
+
+  /* dropdown */
+  .dropdown-wrapper{
+    //display: flex;
+    display: none;
+    position: absolute;
+    top: 60px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 7px 0 rgba(0,0,0,.1);
+    box-shadow: 0 0 7px 0 rgba(0,0,0,.1);
+    padding: 26px 32px;
+    font-size: 0.875rem;
+    cursor: auto;
+    z-index: 999;
+    li{
+      display: block;
+    }
+    a{
+      color: $font-colour-dark;
+      &:hover{
+        color: $accent-colour;
+      }
+    }
+  }
+  .dropdown{
+    min-width: 180px;
+    margin: 0 56px 0 0;
+  }
+
+  .dd-right{
+    margin-right: 0;
+  }
+  .dropdown-title{
+    display: block;
+    color: #757575;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  .dd-link{
+    margin: 17.5px 0;
+  }
+}

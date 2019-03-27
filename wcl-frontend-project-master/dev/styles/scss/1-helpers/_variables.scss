@@ -1,0 +1,90 @@
+// Variables
+//==============================================================================
+// colours
+// branding
+$brand-colour: #BC081C; /* rgb 188,8,28 */
+$brand-secondary-colour: #263238; /* rgb 38,50,56 */
+$accent-colour: #00838F; /* rgb 0,131,143 */
+
+// ui
+$success-colour: #00C569; /* rgb 0,120,130 */
+$warning-colour: #FCC94E; /* rgb 252, 201,78 */
+$information-colour: #0084CE; /* rgb 0,132,206 */
+
+// greyscale
+$black-colour: #20252B; /* rgb 32,37,43 */
+$white-colour: #F8F9FA; /* rgb 248,249,250 */
+
+
+// reds
+$deep-maroon: #840000;
+$red-devil: #890615;
+$heidelberg-red: #9C0818;
+$cornell-red: #AB081A;
+$cardinal-red: #C21E30;
+$dark-terra-cotta-red: #CE4B59;
+$cameo-pink: #ECBBC1;
+$champagne-pink: #F2D2D5;
+$linen-pink: #F8E8EA;
+
+// dark blues
+$rich-blue: #000A12;
+$dark-jungle-blue: #1B2226;
+$charleston-blue: #20292E;
+$charleston-dark: #232E33;
+$arsenic-blue: #39444A;
+$feldgrau-blue: #4F5B62;
+$silver-chalice: #AEB2B4;
+$gainsboro-blue: #D7D9DA;
+$isabelline-blue: #EBECEC;
+
+// teals
+$midnight-green: #005662;
+$blue-sapphire: #176570;
+$skobeloff-blue: #006C76;
+$teal: #007882;
+$keppel-blue: #2E99A3;
+$verdigris-blue: #4FB3BF;
+$dark-sky-blue: #8BC6CC;
+$powder-blue: #B9DDE0;
+$anti-flash-white: #E7F3F4;
+
+// greens
+$state-green: #005437;
+$dartmouth-green: #007A3B;
+$pigment-green: #00A050;
+$eucalyptus-green: #44DD9A;
+$teal-deer-green: #92F1BD;
+$light-cyan: #DDFDEB;
+
+// yellows
+$pullman-brown: #604700;
+$gambodge-brown: #926C00;
+$lemon-curry: #D1A419;
+$flavescent-yellow: #FFE295;
+$papaya-whip: #FFF3D4;
+$floral-white: #FFFCF3;
+
+// blues
+$space-blue: #153D56;
+$imperial-blue: #004A74;
+$sapphire-blue: #0069A7;
+$carolina-blue: #4DA3DD;
+$baby-blue-eyes: #9FD5F9;
+$alice-blue: #EDF8FF;
+
+// cta
+$primary-cta-colour: $accent-colour;
+$primary-cta-hover: $midnight-green;
+$secondary-cta-colour: $brand-secondary-colour;
+$secondary-cta-hover: $rich-blue;
+
+// fonts
+$font-stack: 'clear sans', 'Tahoma', 'Geneva', sans-serif;
+$font-colour-light: $white-colour;
+$font-colour-dark: $black-colour;
+
+// general
+$font-size: 16px;
+$line-height: 1.5;
+$letter-spacing: 0;

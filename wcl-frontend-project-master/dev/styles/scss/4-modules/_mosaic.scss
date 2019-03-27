@@ -1,0 +1,67 @@
+.van-leasing{
+  background: url("https://www.whatcar.com/car-leasing/images/mark-img/van-leasing.jpg") no-repeat center;
+}
+.special-offers{
+  background: url("https://www.whatcar.com/car-leasing/images/homepage/mosaic4.jpg") no-repeat center;
+}
+.green-cars{
+  background: url("https://www.whatcar.com/car-leasing/images/homepage/mosaic1.jpg") no-repeat center;
+}
+.about-us{
+  background: url("https://www.whatcar.com/car-leasing/images/homepage/mosaic2.jpg") no-repeat center;
+}
+.in-stock-cars{
+  background: url("https://www.whatcar.com/car-leasing/images/homepage/mosaic6.jpg") no-repeat center;
+}
+.lifestyle-card{
+  /*background: $prime-teal;*/
+  background-size: cover;
+  height: 20rem;
+  position: relative;
+}
+
+.label{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  color: $font-colour-light;
+  background: rgba(188, 8, 28, 0.6);
+  padding: 0.625rem; /* 10px */
+  transition: ease-in-out .3s;
+  cursor: pointer;
+  &:hover{
+    background: $brand-colour;
+  }
+  .label-title{
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .label-cta{
+    color: $font-colour-light;
+  }
+}
+.van-leasing,
+.special-offers,
+.green-cars,
+.about-us,
+.in-stock-cars{
+  margin-top: -12px;
+}
+
+// medium sized screens
+@include media-min(45em){
+  .label{
+    width: 50%;
+    &:hover{
+      width: 55%;
+    }
+  }
+  .van-leasing,
+  .special-offers,
+  .green-cars,
+  .about-us,
+  .in-stock-cars{
+    margin-left: -12px;
+  }
+}

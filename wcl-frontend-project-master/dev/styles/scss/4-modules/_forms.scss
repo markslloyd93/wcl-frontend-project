@@ -1,0 +1,78 @@
+.form-control{
+  display: block;
+  width: 100%;
+  height: calc(2.25rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  background-color: #FFFFFF;
+  background-clip: padding-box;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* checkbox */
+.form-check{
+  position: relative;
+  display: block;
+  padding-left: 1.25rem;
+}
+.form-check-input{
+  position: absolute;
+  margin-top: .3rem;
+  margin-left: -1.25rem;
+}
+
+/* checkbox switches */
+.switch{
+  position: relative;
+  display: block;
+  width: 70px;
+  height: 30px;
+  margin-bottom: 30px;
+}
+
+.slider{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  transition: .5s;
+  border: 3px solid #ffffff;
+  box-shadow: 1px 1px 1px rgba(0,0,0, 0.1);
+}
+.slider:before{
+  position: absolute;
+  content: "";
+  bottom: 14px;
+  top: 8px;
+  background: rgb(175, 175, 175);
+  transition: .5s;
+  left: -5px;
+}
+
+.switch input{
+  display: none;
+}
+
+input:checked + .slider{
+  background: rgb(212, 212, 212);
+}
+
+input:checked + .slider:before{
+  transform: translateX(52px) rotateZ(90deg);
+  background: #bc081c;
+}
+
+.slider.round{
+  border-radius: 35px;
+}
+
+.slider.round:before{
+  width: 38%;
+  height: 38%;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  transform: rotateZ(-90deg);
+}

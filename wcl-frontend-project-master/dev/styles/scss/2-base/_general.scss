@@ -1,0 +1,128 @@
+/* general styling */
+//reset
+*{
+  margin: 0;
+  padding: 0;
+  @include box-sizing(border-box);
+}
+
+//base
+body{
+  color: $font-colour-dark;
+  font-family: $font-stack;
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  padding-top: 8.75rem; // prevents hidden elements caused by fixed positioning. 8.75rem = 140px;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: $accent-colour;
+  cursor: pointer;
+  &:hover{
+    color: $midnight-green;
+  }
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+section{
+  margin: 1.25rem 0; // 20px/16px = 1.25rem
+}
+
+.icon{
+  cursor: pointer;
+  li{
+    &:hover{
+      color: $midnight-green;
+    }
+  }
+}
+
+// font sizes
+.display{
+  font-size: 3.125rem; /* 50px/16px = 3.125em */
+}
+.h1{
+  font-size: 2.125rem; /* 34px */
+}
+.h2{
+  font-size: 1.5rem; /* 24px */
+}
+.h3{
+  font-size: 1.25rem; /* 20px */
+}
+.p-small{
+  font-size: 0.875rem; /* 14px */
+}
+.note{
+  font-size: 0.75rem; /* 12px */
+}
+.display,
+.h1,
+.h2,
+.h3,
+.p-small,
+.note{
+  margin: 1.25rem 0;
+}
+
+.container{
+  margin: 0 auto;
+  width: 95%;
+}
+
+/* the site wrapper class creates a sticky footer. Everything apart from the footer is wrapped inside the site-wrapper div */
+.site-wrapper{
+  min-height: calc(100vh - 912px);
+}
+
+.usp{
+  text-align: center;
+  img{
+    width: 3.125rem; /* 50px */
+    vertical-align: middle;
+  }
+  p{
+    display: inline-block;
+  }
+}
+
+.searh_range_list{
+  margin: 10px 0;
+  li{
+    display: inline-block;
+  }
+}
+
+/* medium screens */
+@include media-min(45rem){
+  body{
+    padding-top: 8.75rem; /* 140px */
+  }
+  .display{
+    font-size: 3.75rem; /* 60px */
+  }
+  .h1{
+    font-size: 2.5rem; /* 40px */
+  }
+
+  .container{
+    width: 90%;
+  }
+}
+
+/* large screens */
+@include media-min(57.5rem){
+  .container{
+    width: 85%;
+  }
+}

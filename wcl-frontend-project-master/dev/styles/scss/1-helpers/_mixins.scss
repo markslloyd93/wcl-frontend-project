@@ -1,0 +1,59 @@
+// Mixins
+//==============================================================================
+// box-sizing
+@mixin box-sizing($box-sizing){
+  -webkit-box-sizing: $box-sizing;
+  -moz-box-sizing: $box-sizing;
+  box-sizing: $box-sizing;
+}
+
+// border-radius
+@mixin border-radius($border-radius){
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  border-radius: $border-radius;
+}
+
+// box-shadow
+@mixin box-shadow($offsetx, $offsety, $blur, $colour){
+  -webkit-box-shadow: $offsetx $offsety $blur $colour;
+  -moz-box-shadow: $offsetx $offsety $blur $colour;
+  -ms-box-shadow: $offsetx $offsety $blur $colour;
+  box-shadow: $offsetx $offsety $blur $colour;
+}
+
+// media query
+@mixin media-min($media-width){
+  @media (min-width: $media-width){
+    @content;
+  }
+}
+
+@mixin media-max($media-width){
+  @media (max-width: $media-width){
+    @content;
+  }
+}
+
+// user select
+@mixin user-select($user-select){
+  -webkit-user-select: $user-select;
+  -moz-user-select: $user-select;
+  -ms-user-select: $user-select;
+  user-select: $user-select;
+}
+
+// pseudo - for ::before & ::after
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pros;
+}
+
+// truncate
+@mixin truncate($truncation-boundary){
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

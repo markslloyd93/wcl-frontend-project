@@ -1,0 +1,39 @@
+.hero{
+  width: 100%;
+  height: 60vh;
+  margin: 0;
+  background: $brand-secondary-colour;
+  background: linear-gradient(rgba(38, 50, 56, 0.6), rgba(38, 50, 56, 0.6)),url('https://www.whatcar.com/car-leasing/images/homepage/home-banner.jpg') no-repeat center;
+  background-size: cover;
+  color: $font-colour-light;
+  position: relative;
+  h1{
+    margin-bottom: 0.625rem;
+    text-transform: capitalize;
+  }
+}
+
+.hero-container{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.location-wrapper{
+  padding-bottom: 0.625rem;
+  h2{
+    display: inline-block;
+    text-transform: capitalize;
+    padding-right: 0.625rem;
+  }
+}
+
+
+//medium sized screens
+@include media-min(45em){
+  .hero{
+    height: 25rem;/* 400px */
+  }
+}

@@ -1,0 +1,104 @@
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+table .btn{
+  display:block;
+  margin:10px 0;
+  width:100%;
+}
+th{
+  background:#333;
+  color:#f8f9fa;
+  font-weight:700;
+  text-transform:capitalize;
+}
+td,th{
+  padding:6px;
+  border:1px solid #ccc;
+  text-align:center;
+}
+.table-price{
+  font-weight:700;
+}
+.table-price span{
+  font-weight:400;
+  display:block;
+  margin:0;
+}
+.contract p{
+  text-align:left;
+}
+.dealer-info a,
+.dealer-info p{
+  font-weight:700;
+}
+.dealer-info a{
+  margin:0;
+}
+
+@media (max-width:60em){
+  table,
+  tbody,
+  td,
+  th,
+  thead,
+  tr{
+    display:block;
+  }
+  thead tr{
+    position:absolute;
+    top:-9999px;
+    left:-9999px;
+  }
+  td,
+  th{
+    text-align:left;
+  }
+  td{
+    border:none;
+    border-bottom:1px solid #eee;
+    position:relative;
+    padding-left:50%;
+  }
+  td:before{
+    position:absolute;
+    top:6px;
+    left:6px;
+    width:45%;
+    padding-right:10px;
+    white-space:nowrap;
+    text-transform:capitalize;
+    font-weight:700;
+  }
+    .table-full{
+      padding-left:0;
+    }
+    .dealer-info img{
+      display:none;
+    }
+    td:nth-of-type(1):before{
+      content:"";
+    }
+    td:nth-of-type(2):before{
+      content:"dealer";
+    }
+    td:nth-of-type(3):before{
+      content:"vehicle";
+    }
+    td:nth-of-type(4):before{
+      content:"contract";
+    }
+    td:nth-of-type(5):before{
+      content:"initial payment";
+    }
+    td:nth-of-type(6):before{
+      content:"price";
+    }
+    td:nth-of-type(7):before{
+      content:"";
+    }
+    tr:nth-of-type(even){
+      background:#eee;
+      }
+}

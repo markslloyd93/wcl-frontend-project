@@ -1,0 +1,54 @@
+.btn{
+  padding: 0.625rem 1.25rem;
+  @include border-radius(4px);
+  color: $font-colour-light;
+  text-transform: capitalize;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  //user-select controls whether the suer can select text.
+  @include user-select(none);
+}
+.btn-primary{
+  background: $primary-cta-colour;
+  border: 1px solid $primary-cta-colour;
+  &:hover{
+    background: $primary-cta-hover;
+    border: 1px solid $primary-cta-hover;
+  }
+}
+.btn-secondary{
+  background: $secondary-cta-colour;
+  border: 1px solid $secondary-cta-colour;
+  &:hover{
+    background: $secondary-cta-hover;
+    border: 1px solid $secondary-cta-hover;
+  }
+}
+.btn-primary-outline{
+  background-color: transparent;
+  border: 2px solid $primary-cta-colour;
+  color: $primary-cta-colour;
+  &:hover{
+    background: $primary-cta-hover;
+    //color: $font-colour-light;
+  }
+}
+
+.btn-secondary-outline{
+  background-color: transparent;
+  border: 2px solid $secondary-cta-colour;
+  color: $secondary-cta-colour;
+  &:hover{
+    background: $secondary-cta-hover;
+    //color: $font-colour-light;
+  }
+}
+.link{
+  color: $accent-colour;
+  &:hover{
+    color: $primary-cta-hover;
+    border-bottom: 2px solid $primary-cta-hover;
+    @include border-radius(0);
+  }
+}

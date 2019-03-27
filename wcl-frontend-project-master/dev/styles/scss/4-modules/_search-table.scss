@@ -1,0 +1,138 @@
+/* start responsive table */
+table{
+  width: 100%;
+  border-collapse: collapse;
+  .btn{
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+  }
+}
+
+th{
+  background: #333333;
+  color: $font-colour-light;
+  font-weight: bold;
+  text-transform: capitalize;
+
+}
+td, th{
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.table-price{
+  font-weight: bold;
+  span{
+    font-weight: normal;
+    display: block;
+    margin: 0;
+  }
+}
+
+.contract{
+  p{
+    text-align: left;
+  }
+}
+
+.dealer-info{
+  p,
+  a{
+    font-weight: bold;
+  }
+  a{
+    margin: 0;
+  }
+}
+
+//small sized screens
+@include media-max(60em){
+  /* force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr{
+    display: block;
+  }
+
+  /* hide table headers */
+  thead tr{
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  td, th{
+    text-align: left;
+  }
+
+  /*tr{
+    border: 1px solid #cccccc;
+    padding: 10px;
+  }*/
+
+  td{
+    /* behave like a row */
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+    position: relative;
+    padding-left: 50%;
+  }
+  td:before{
+    /* now like a table header */
+    position: absolute;
+    /* top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+
+  .table-full{
+    padding-left: 0;
+  }
+
+  .dealer-info{
+    img{
+      display: none;
+    }
+  }
+
+  /*
+  Label the data
+  */
+  td:nth-of-type(1):before {
+    content: "";
+  }
+  td:nth-of-type(2):before {
+    content: "dealer";
+  }
+  td:nth-of-type(3):before {
+     content: "vehicle";
+  }
+  td:nth-of-type(4):before {
+    content: "contract";
+  }
+  td:nth-of-type(5):before {
+    content: "initial payment";
+  }
+  td:nth-of-type(6):before {
+     content: "price";
+  }
+  td:nth-of-type(7):before {
+     content: "";
+  }
+
+  /* zebra striping */
+  tr:nth-of-type(even){
+    background: #eeeeee;
+  }
+}
+/* end responsive table */

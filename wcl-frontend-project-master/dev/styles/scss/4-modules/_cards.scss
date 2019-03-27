@@ -1,0 +1,98 @@
+.card{
+  @include border-radius(4px);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  position: relative;
+  .btn{
+    display: block;
+    color: $font-colour-light;
+  }
+}
+.card-content{
+  text-align: center;
+  min-height: 8.125rem; /*130px*/
+}
+.card-price{
+  color: $brand-colour;
+  font-weight: bold;
+  font-size: 20px;
+}
+.card-price-info{
+  font-size: 14px;
+}
+.card-cta{
+  text-align: center;
+}
+
+.card-banner{
+  background: $accent-colour;
+  width: 100%;
+  position: absolute;
+  color: $font-colour-light;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.card-extra-info{
+  text-align: center;
+  font-size: 12px;
+}
+.card-content,
+.card-cta,
+.card-extra-info{
+  padding: 10px;
+}
+.card-extra-info p{
+  font-size: 14px;
+}
+.range-card{
+  margin: 30px 0;
+  .card-img{
+    width: 10em;
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .card-content{
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .btn{
+    margin-top: 10px;
+  }
+}
+.card-icon{
+  padding: 1.25em 1em;
+  cursor: pointer;
+}
+
+.hidden-overlay{
+  display: none;
+  background: white;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.deal-card{
+  min-height: 27.1875rem; /* 435px */
+  .card-img{
+    text-align: center;
+    img{
+      max-width: 200px;
+    }
+  }
+}
+
+/* link card */
+.link-card{
+  min-height: 206px;
+  .card-cta{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
